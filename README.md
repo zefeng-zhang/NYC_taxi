@@ -5,7 +5,7 @@ by Zefeng Zhang, Donny Chen, Eric Lehman, Philip Rotella
 Introduction
 ------------
 
-FanDuel Inc. is a daily fantasy company that allows for legal gambling on multiple sports on a daily basis.  For NFL games, FanDuel allows you to select a lineup given several constraints.  Typically, you will have a set salary cap and from that salary cap you can spend money on players to set a fantasy lineup.  The most common lineup format is as shown in **Table 1** below.
+FanDuel Inc. is a daily fantasy company that allows for legal gambling on multiple sports daily.  For NFL games, FanDuel allows you to select a lineup given several constraints.  Typically, you will have a set salary cap and from that salary cap, you can spend money on players to set a fantasy lineup.  The most common lineup format is as shown in **Table 1** below.
 
 Table 1: Common Lineup Format for FanDuel Site
 
@@ -18,18 +18,16 @@ Table 1: Common Lineup Format for FanDuel Site
 | Kicker        | 1      | 
 | Defense       | 1      | 
 
-Once lineups have been set, fantasy teams gain points via actual NFL football game statistics.  For example, typically a running back will receive 1 point for every ten yards rushing in a game.  Different leagues have different point settings.  For the analysis conducted in this report we assume standard PPR league scoring.  In a PPR league a player is awarded 0.5 points for every reception.
+When arrangements have been set, dream groups gain focuses through real NFL football match-up measurements. For instance, regularly a running back will get 1 point for each ten yards hurrying in a game. Various alliances have diverse point settings. For the investigation led in this report we expect standard PPR group scoring. In a PPR association a player is granted 0.5 focuses for each gathering.
 
 Data
 ----
 
 Data from multiple sources were used.  The following R package was used to scrape data from the NFL’s API website:  https://github.com/maksimhorowitz/nflscrapR.  NFL player stats are available for all games from 2009 through 2016.  For the models created in this report, 50 different statistics were used.  Example R scripts have been uploaded on Canvas.  Player data has been scraped for the 2015 season and for weeks 1-12 of the 2016 season.
 
-Additionally, FanDuel player salaries and point totals were uploaded from http://rotoguru.com.  The player’s point total will be the response variable that the machine learning algorithms will be trying to predict for each player.
+The last information source is extended dream player information for the best 50 players at each position (barring group protections). This information was accessible from http://fantasydata.com. A python content was composed to join the information for all players for throughout the weeks in 2015 and 2016. The suitable python contents have been transferred to Canvas. 
 
- The final data source is projected fantasy player data for the top 50 players at each position (excluding team defenses).  This data was available from http://fantasydata.com. A python script was written to join the data for all players for all weeks in 2015 and 2016.  The appropriate python scripts have been uploaded to Canvas.
-
-Joining the data was not a completely straightforward process as each data set had different player identification numbers, some players have similar names, and team names were not always abbreviated consistently.  Several verification steps were taken to make sure that the data was joined in a consistent manner.
+Joining the information was not a totally direct cycle as every informational collection had diverse player recognizable proof numbers, a few players have comparative names, and group names were not generally truncated reliably. A few check steps were taken to ensure that the information was participated in a predictable way.
 
 Feature Selection
 -----------------
@@ -101,16 +99,17 @@ Figure 2: Test RMSE (Comparison to FantasyData.com Predictions, 2016 Weeks 5-12)
 Conclusion and future work
 --------------------------
 
-Machine learning models predicting fantasy football points were successfully implemented using ridge regression, bayesian ridge regression, elastic net, random forest and boosting.  The models performed reasonably well when compared to FantasyData.com projections for the 2016 season.
+AI models foreseeing dream football focuses were effectively actualized utilizing edge relapse, bayesian edge relapse, versatile net, irregular backwoods and boosting. The models performed sensibly well when contrasted with FantasyData.com projections for the 2016 season. 
 
-If the project were to be continued several additional steps could be taken to potentially improve model performance:
+On the off chance that the venture were to be proceeded with a few extra advances could be taken to possibly improve model execution: 
 
-* Add additional variables into the model such as injuries, defensive stats and/or previous year fantasy performance.
-* Add additional fantasy projections into the model
-* Try additional modelling techniques and parameter optimizations
-* Algorithmically perform feature selection (possibly could drop some of the features used)
+* Add extra factors into the model, for example, wounds, cautious details or potentially earlier year dream execution. 
 
+* Add extra dream projections into the model 
 
+* Try extra displaying methods and boundary advancements 
+
+* Algorithmically perform include choice (could drop a portion of the highlights utilized)
 
 
 
