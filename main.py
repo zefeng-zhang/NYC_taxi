@@ -66,6 +66,13 @@ def get_game_char_indicators(df):
     return df, ['home'] + list(oppts.columns) + list(team_list)
 
 def rolling_average(df, window):
+    """
+    Return a rolling average of a window.
+
+    Args:
+        df: (todo): write your description
+        window: (int): write your description
+    """
     return df.rolling(min_periods=1, window=window).mean().shift(1)
 
 def get_player_averages(df, stats):
