@@ -36,6 +36,12 @@ Bar plot to compare prediction RMSE to Fantasydata.com
 """
 
 def autolabel(rects):
+    """
+    Autolabel the given rectangle.
+
+    Args:
+        rects: (todo): write your description
+    """
     # attach value labels
     for rect in rects:
         height = rect.get_height()
